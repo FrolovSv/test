@@ -25,8 +25,8 @@ public class ResultTest2 {
                 mass[i] = Integer.parseInt(line[i]);
             }
 
-//            switch (new Random().nextInt(4)+1){
-            switch (4){
+            switch (new Random().nextInt(4)+1){
+            //switch (4){
                 case 1:
                     printArray("Сортировка методом вставки", localInsertIntoSorts(mass));
                     break;
