@@ -44,9 +44,7 @@ public class HW_2 {
 
             for (int i = 0; i < 20; i++) {
                 mass[i] = -(d.nextInt(10));
-                System.out.print(mass[i]+",");
                 mass[++i] = (d.nextInt(10));
-                System.out.print(mass[i]+",");
             }
             System.out.println();
             for (int i = 0; i < 20; i++) {
@@ -59,16 +57,8 @@ public class HW_2 {
                     minMaxPos = i;
                 }
             }
-            System.out.println("maxMin "+maxMin);
-            System.out.println("minMax "+minMax);
-
             mass[minMaxPos] = maxMin;
             mass[maxMinPos] = minMax;
-
-            for (int it:mass
-                 ) {
-                System.out.print(it+",");
-            }
 
         } catch (Exception ex) {
             System.out.println("Ошибка");
