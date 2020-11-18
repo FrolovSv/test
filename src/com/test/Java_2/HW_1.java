@@ -30,28 +30,28 @@ public class HW_1 {
     public static void main(String[] args) {
 
         try (Scanner in = new Scanner(System.in)) {
-            System.out.println("Старт калькулятора");
+            System.out.println("Старт калькулятора. Дроные числа вводятся со знаком \",\" между целой и дробной частью");
             System.out.println("Введите тип операции. Дотсупные операции (+,-,*,/):");
             String oper = in.nextLine();
 
             System.out.println("Введите первое число:");
-            double digit1 = in.nextInt();
+            double digit1 = in.nextDouble();
 
             System.out.println("Введите второе число:");
-            double digit2 = in.nextInt();
+            double digit2 = in.nextDouble();
 
             switch (oper) {
                 case "+":
-                    System.out.format("Сумма чисел равна: %.4f", (digit1 + digit2));
+                    System.out.printf("Сумма чисел равна: %.4f", (digit1 + digit2));
                     break;
                 case "-":
-                    System.out.format("Сумма чисел равна: %.4f", (digit1 - digit2));
+                    System.out.printf("Разность чисел равна: %.4f", (digit1 - digit2));
                     break;
                 case "*":
-                    System.out.format("Сумма чисел равна: %.4f", (digit1 * digit2));
+                    System.out.printf("Произведение чисел равна: %.4f", (digit1 * digit2));
                     break;
                 case "/":
-                    System.out.format("Сумма чисел равна: %.4f", (digit1 / digit2));
+                    System.out.printf("Деление чисел равна: %.4f", (digit1 / digit2));
                     break;
             }
 
