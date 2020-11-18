@@ -5,31 +5,27 @@ package com.test.Java_2;
 числами от -10 до 10. Найти максимальный отрицательный и
 минимальный положительный элементы массива. Поменять их
 местами.
-2. Формируется новогодний подарок. Он может включать в себя
-разные сладости (Candy, Jellybean, etc.) У каждой сладости есть
-название, вес, цена и свой уникальный параметр. Необходимо
-собрать подарок из сладостей. Найти общий вес подарка, общую
-стоимость подарка и вывести на консоль информацию о всех
-сладостях в подарке.
  */
 
 import java.util.Random;
 import java.util.Scanner;
 
 /**
- * класс для реализации домашнего задания №1 курса java 2.0
+ * класс для реализации домашнего задания №4 часть 1  курса java 2.0
+ *
  * @author Frolov S.V.
  * @version 1.0
  */
 
-public class HW_2 {
+public class HW_4_1 {
 
     /**
      * "Это основной метод выполняющий заданные функции
+     *
      * @param args параметры заданные при старте приложения
-     * @exception Exception  если были введены не корректные значения то генерируется исключение
+     * @throws Exception если были введены не корректные значения то генерируется исключение
      * @see Exception
-     * */
+     */
 
     public static void main(String[] args) {
 
@@ -48,11 +44,11 @@ public class HW_2 {
             }
             System.out.println();
             for (int i = 0; i < 20; i++) {
-                if (mass[i]<0 && mass[i]>maxMin) {
+                if (mass[i] < 0 && mass[i] > maxMin) {
                     maxMin = mass[i];
                     maxMinPos = i;
                 }
-                if (mass[i]>0 && mass[i]<minMax) {
+                if (mass[i] > 0 && mass[i] < minMax) {
                     minMax = mass[i];
                     minMaxPos = i;
                 }
