@@ -1,4 +1,4 @@
-package com.test;
+package com.test.Java_1;
 
 /*
 Написать программу сортировки по возрастанию заданного пользователем массива чисел.
@@ -6,7 +6,6 @@ package com.test;
 Использовать одну из следующих сортировок: прямого выбора, вставки, быстрая, Шелла.
 */
 
-import java.util.Collections;
 import java.util.Random;
 import java.util.Scanner;
 

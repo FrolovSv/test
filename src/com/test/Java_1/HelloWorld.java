@@ -1,4 +1,4 @@
-package com.test;
+package com.test.Java_1;
 
 public class HelloWorld {
     public static void main(String[] args) {

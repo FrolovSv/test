@@ -1,9 +1,8 @@
-package com.test;
+package com.test.Java_1;
 
 //Написать программу сортировки по возрастанию заданного пользователем массива чисел.
 //Использовать пузырьковый метод сортировки.
 
-import javax.naming.InsufficientResourcesException;
 import java.util.Scanner;
 
 public class HW15 {

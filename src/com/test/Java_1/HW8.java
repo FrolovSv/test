@@ -1,4 +1,4 @@
-package com.test;
+package com.test.Java_1;
 
 public class HW8 {
 //    Необходимо с помощью цикла вывести на экран числа от 1 до 50.
