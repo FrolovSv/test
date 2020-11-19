@@ -19,7 +19,7 @@ public class CalculateClass implements CalculatingAbility{
     public CalculateClass(String digit1, String digit2) throws EmptyDigits {
         if (digit1.equals("")) {
             throw new EmptyDigits("Первое число не задано");
-        } else if (digit1.equals("")) {
+        } else if (digit2.equals("")) {
             throw new EmptyDigits("Второе число не задано");
         } else {
             this.Digit1 = digit1.replace(",",".");
