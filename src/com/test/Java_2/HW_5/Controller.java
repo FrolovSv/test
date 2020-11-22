@@ -16,22 +16,25 @@ import com.test.Java_2.HW_5.myExceptions.EmptyResult;
 
 public class Controller {
     public Controller(String operation, String digit1, String digit2) throws EmptyResult, EmptyDigits {
-        switch (operation) {
-            case "+":
-                OutputMessage.outResultMess(new Summ(digit1, digit2).printResult());
-                break;
-            case "-":
-                OutputMessage.outResultMess(new Subtraction(digit1, digit2).printResult());
-                break;
-            case "*":
-                OutputMessage.outResultMess(new Multiplication(digit1, digit2).printResult());
-                break;
-            case "/":
-                OutputMessage.outResultMess(new Division(digit1, digit2).printResult());
-                break;
-            default:
-                OutputMessage.outErrorMess("Введенная операция не распознана");
-                break;
+        try {
+            switch (operation) {
+                case "+":
+                    OutputMessage.outResultMess(new Summ(digit1, digit2).printResult());
+                    break;
+                case "-":
+                    OutputMessage.outResultMess(new Subtraction(digit1, digit2).printResult());
+                    break;
+                case "*":
+                    OutputMessage.outResultMess(new Multiplication(digit1, digit2).printResult());
+                    break;
+                case "/":
+                    OutputMessage.outResultMess(new Division(digit1, digit2).printResult());
+                    break;
+                default:
+                    throw new Exception();
+            }
+        }catch (Exception ex){
+            OutputMessage.outErrorMess("Введенная операция не распознана");
         }
     }
 }
