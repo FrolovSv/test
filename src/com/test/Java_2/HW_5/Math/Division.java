@@ -19,8 +19,15 @@ public class Division extends CalculateClass {
     @Override
     public Double computation() throws EmptyResult {
         try {
-            return Double.parseDouble(getDigit1()) / Double.parseDouble(getDigit2());
-        } catch (Exception ex) {
+            if (getDigit2().equals("0"))
+                throw new ArithmeticException();
+            else if (getDigit1().equals("0"))
+                return 0d;
+            else
+                return Double.parseDouble(getDigit1()) / Double.parseDouble(getDigit2());
+        }catch (ArithmeticException ex1){
+            throw new EmptyResult(this.getClass().getName() + " " + ex1.getLocalizedMessage());
+        }catch (Exception ex) {
             throw new EmptyResult(this.getClass().getName() + " " + ex.getLocalizedMessage());
         }
     }
