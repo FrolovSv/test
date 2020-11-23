@@ -1,7 +1,7 @@
-package com.test.Java_2.HW_5;
+package com.Java_2.HW_5;
 
-import com.test.Java_2.HW_5.myExceptions.EmptyDigits;
-import com.test.Java_2.HW_5.myExceptions.EmptyResult;
+import com.Java_2.HW_5.myExceptions.EmptyDigits;
+import com.Java_2.HW_5.myExceptions.EmptyResult;
 
 import java.util.Scanner;
 
