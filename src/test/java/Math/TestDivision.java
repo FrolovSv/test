@@ -1,12 +1,14 @@
+package Math;
+
 import com.Java_2.HW_5.Math.Amount;
 import com.Java_2.HW_5.Math.CalculateClass;
 import com.Java_2.HW_5.Math.Division;
 import com.Java_2.HW_5.myExceptions.EmptyDigits;
 import com.Java_2.HW_5.myExceptions.EmptyResult;
+import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class TestDivision {
 
@@ -28,8 +30,8 @@ public class TestDivision {
     public void getDigits() throws EmptyDigits, EmptyResult {
         CalculateClass calculateClass = new CalculateClass("2", "2");
         Division division = new Division("1", "1");
-        assertEquals("Проверка работы наследования от класса родителя", calculateClass.getDigit1(), division.getDigit1());
-        assertEquals("Проверка работы наследования от класса родителя", calculateClass.getDigit2(), division.getDigit2());
+        assertEquals("Проверка работы наследования от класса родителя, число 1", calculateClass.getDigit1(), division.getDigit1());
+        assertEquals("Проверка работы наследования от класса родителя, число 2", calculateClass.getDigit2(), division.getDigit2());
     }
 
     @Test
@@ -38,9 +40,9 @@ public class TestDivision {
         Division division = new Division("1", "1");
         division.computation();
         try {
-            assertEquals("Проверка суммы класса родителя через printResult()", "null", calculateClass.printResult());
-        } catch (Exception ex) {
-            assertTrue(true);
+            assertEquals("Проверка проброса исключения при вызове родительского класса метода printResult()", "null", calculateClass.printResult());
+        } catch (EmptyResult ex) {
+            assertEquals("Проверка проброса исключения, второе пустое","Мне жаль, но результат вычислений равен null",ex.getMessage());
         }
 
     }

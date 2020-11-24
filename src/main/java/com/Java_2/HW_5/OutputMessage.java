@@ -11,12 +11,12 @@ import java.util.Date;
 
 public class OutputMessage {
     public static void outInfoMess(String str){
-        System.out.println(new Date(0) +" [INFO] "+ str);
+        System.out.println(new Date() +" [INFO] "+ str);
     }
     public static void outErrorMess(String str){
-        System.err.println(new Date(0) +" [ERROR] "+ str);
+        System.err.println(new Date() +" [ERROR] "+ str);
     }
     public static void outResultMess(Double result){
-        System.out.printf(new Date(0) +" [RESULT] = %.4f",result);
+        System.out.printf(new Date() +" [RESULT] = %.4f",result);
     }
 }

@@ -16,7 +16,13 @@ import com.Java_2.HW_5.myExceptions.EmptyResult;
 
 public class Controller {
     public Controller(String operation, String digit1, String digit2) throws EmptyResult, EmptyDigits {
-        try {
+        if (digit1.equals("") && digit2.equals("")){
+            throw new EmptyDigits("Первое и второе число не заданы");
+        }else if (digit1.equals("")){
+            throw new EmptyDigits("Первое число не задано");
+        }else if (digit2.equals("")){
+            throw new EmptyDigits("Второе число не задано");
+        }else {
             switch (operation) {
                 case "+":
                     OutputMessage.outResultMess(new Amount(digit1, digit2).printResult());
@@ -31,10 +37,8 @@ public class Controller {
                     OutputMessage.outResultMess(new Division(digit1, digit2).printResult());
                     break;
                 default:
-                    throw new Exception();
+                    throw new EmptyResult("Операция не распознана");
             }
-        }catch (Exception ex){
-            OutputMessage.outErrorMess("Введенная операция не распознана");
         }
     }
 }

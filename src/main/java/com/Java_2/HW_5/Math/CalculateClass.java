@@ -16,16 +16,10 @@ public class CalculateClass implements CalculatingAbility{
     private static String Digit2;
     private Double Result;
 
-    public CalculateClass(String digit1, String digit2) throws EmptyDigits {
-        if (digit1.equals("")) {
-            throw new EmptyDigits("Первое число не задано");
-        } else if (digit2.equals("")) {
-            throw new EmptyDigits("Второе число не задано");
-        } else {
-            this.Digit1 = digit1.replace(",",".");
-            this.Digit2 = digit2.replace(",",".");
-            this.Result = null;
-        }
+    public CalculateClass(String digit1, String digit2){
+        this.Digit1 = digit1.replace(",",".");
+        this.Digit2 = digit2.replace(",",".");
+        this.Result = null;
     }
 
     @Override
